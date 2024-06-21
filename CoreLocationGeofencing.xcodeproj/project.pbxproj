@@ -13,6 +13,8 @@
 		552CD09C2C25835700C06075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552CD09A2C25835700C06075 /* Main.storyboard */; };
 		552CD09E2C25835800C06075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552CD09D2C25835800C06075 /* Assets.xcassets */; };
 		552CD0A12C25835800C06075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 552CD09F2C25835800C06075 /* LaunchScreen.storyboard */; };
+		552CD0A92C25851C00C06075 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552CD0A82C25851C00C06075 /* NotificationManager.swift */; };
+		5545BF242C258F2600073DA1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545BF232C258F2600073DA1 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		552CD09D2C25835800C06075 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		552CD0A02C25835800C06075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		552CD0A22C25835800C06075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552CD0A82C25851C00C06075 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		5545BF232C258F2600073DA1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				552CD0942C25835700C06075 /* AppDelegate.swift */,
 				552CD0962C25835700C06075 /* SceneDelegate.swift */,
 				552CD0982C25835700C06075 /* ViewController.swift */,
+				552CD0A82C25851C00C06075 /* NotificationManager.swift */,
+				5545BF232C258F2600073DA1 /* LocationManager.swift */,
 				552CD09A2C25835700C06075 /* Main.storyboard */,
 				552CD09D2C25835800C06075 /* Assets.xcassets */,
 				552CD09F2C25835800C06075 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				552CD0992C25835700C06075 /* ViewController.swift in Sources */,
 				552CD0952C25835700C06075 /* AppDelegate.swift in Sources */,
+				5545BF242C258F2600073DA1 /* LocationManager.swift in Sources */,
+				552CD0A92C25851C00C06075 /* NotificationManager.swift in Sources */,
 				552CD0972C25835700C06075 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,9 +300,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5PD3WD5BAH;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreLocationGeofencing/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We need Bluetooth to detect beacons";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Bugfender want to use your location to show you nearby results";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,9 +330,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5PD3WD5BAH;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreLocationGeofencing/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "We need Bluetooth to detect beacons";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Bugfender want to use your location to show you nearby results";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

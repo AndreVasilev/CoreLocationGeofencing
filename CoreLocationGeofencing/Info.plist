@@ -21,5 +21,19 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We want to use your location to show you nearby results.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We want to use your location to show you nearby results.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We want to use your location to show you nearby results.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>We want to use your location to show you nearby results.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>We need Bluetooth to detect beacons.</string>
 </dict>
 </plist>

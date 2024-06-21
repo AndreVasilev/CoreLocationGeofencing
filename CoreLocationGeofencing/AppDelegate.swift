@@ -10,10 +10,17 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UNUserNotificationCenter.current().delegate = self
+
+///     The value of this key is an NSNumber object containing a Boolean value. 
+///     You should use the presence of this key as a signal to create a CLLocationManager object and start location services again.
+///     Location data is delivered only to the location manager delegate and not using this key.
+        if let value = launchOptions?[.location] as? NSNumber {
+            NotificationManager.shared.sendNotification(title: "Application didFinishLaunching", subtitle: "Options value: \(value.boolValue)")
+        }
+
         return true
     }
 
@@ -30,7 +37,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        return [.badge, .banner, .sound, .list]
+    }
+}
